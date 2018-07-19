@@ -35,6 +35,8 @@ const parsePage = (url, parser) => fetch(url)
     .then(HTMLParser.parse)
     .then(parser)
 
+const startTime = new Date()
+
 const data = projects.map(project => {
     const projectUrl = "" + baseUrl + project.id
     const projectFilesUrl = projectUrl + fileUrl
@@ -57,9 +59,14 @@ Promise.all(data).then(results => {
 
     console.log(`You have ${String(totalDownloads).green} total downloads and ${String(recentDownloads).green} recent downloads`)
     results.forEach(({name, recentDownloads: r, totalDownloads: t}) => {
+        // Output:
+        //      Recount: 12345678 total, 10456 recent
         console.log(
-            `${name}`.cyan,
-            `: ${t} total, ${r} recent`
+            `${String(name).cyan}:`,
+            `${t} total, ${r} recent`
         )
     })
+
+    const executionTime = new Date() - startTime
+    console.log(`\nRan in ${String(executionTime).red}ms`)
 });
