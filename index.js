@@ -11,6 +11,7 @@ const activeUsersParser = html => Number(
     .querySelector(".project-file-list-item")
     .querySelector(".project-file-downloads")
     .text
+    .replace(',','')
 )
 
 const totalDownloadsParser = html => {
