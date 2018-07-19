@@ -1,0 +1,16 @@
+{
+    "projects" : [
+        {
+            "name" : "Socialite",
+            "id" : "/socialite"
+        }, {
+            "name" : "Talented",
+            "id" : "/talented-specs"
+        }, {
+            "name" : "ASHH",
+            "id" : "/appearance-sets-helm-hider"
+        }
+    ],
+    "baseUrl" : "https://wow.curseforge.com/projects",
+    "fileUrl" : "/files"
+}
