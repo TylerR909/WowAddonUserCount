@@ -15,3 +15,10 @@ Modify `projects.json` with your project's information. Provide a friendly name 
 
 ## To Run
 This is a node script, so enter the directory, make sure dependencies are installed with `npm i` or `yarn` and then run the app: `npm start` or `node .`
+
+
+## Improvements
+* Electronize to a very simple app
+* Clean up the code
+* Bundle it into 1 script so it doesn't need a `node_modules` folder
+* Instead of most recent download, specify most recent release (or better yet, make it a flag)
